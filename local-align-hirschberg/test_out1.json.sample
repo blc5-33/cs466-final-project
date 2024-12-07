@@ -1,0 +1,50 @@
+[
+    {
+        "score": 15,
+        "description": "NC_038294.1 |Betacoronavirus England 1 isolate H123990006, complete genome",
+        "alignments": [
+            [
+                "ATTACAGATTACAGATTAC",
+                "ATTACAGATTATA-ATTAC"
+            ],
+            [
+                "ATTACAGATTACAGATTAC-A",
+                "ATTACAGATTATA-ATTACTA"
+            ]
+        ]
+    },
+    {
+        "score": 15,
+        "description": "NC_019843.3 |Middle East respiratory syndrome-related coronavirus isolate HCoV-EMC/2012, complete genome",
+        "alignments": [
+            [
+                "ATTACAGATTACAGATTAC",
+                "ATTACAGATTATA-ATTAC"
+            ],
+            [
+                "ATTACAGATTACAGATTAC-A",
+                "ATTACAGATTATA-ATTACTA"
+            ]
+        ]
+    },
+    {
+        "score": 14,
+        "description": "NC_049978.1 |IAS virus, complete genome",
+        "alignments": [
+            [
+                "CAGATTAC-AGA-TTACA",
+                "CAGATTACCAGATTTACA"
+            ]
+        ]
+    },
+    {
+        "score": 14,
+        "description": "NC_040688.1 |Gammapapillomavirus sp. isolate Gamma_w11C51, complete genome",
+        "alignments": [
+            [
+                "ATT-ACAG-ATTACAGAT--TACA",
+                "ATTGACATTATTACAGATACTACA"
+            ]
+        ]
+    }
+]
