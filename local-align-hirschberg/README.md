@@ -12,3 +12,5 @@ Can inspect the code to ensure that it really does work with Hirschberg and not 
 ## Output
 
 The CLI tool outputs it's results in a neat JSON format, both human-readable and easily program-readable, ranked by top 10 results by default, unless the `-n` or `--count` switch was specified to the CLI.
+
+See the sample output in `test_out1.json.sample` to get an idea of how your output will look like.
