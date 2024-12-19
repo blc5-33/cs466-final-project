@@ -9,5 +9,20 @@ The human coronavirus genomes we have are contained in a the file `scrubbed-vira
 
 ### Python Environment Setup
 
-Run 
+Run:
+```
+$ python3 -m venv .
+```
+with Python version 3.9 (may work without exactly 3.9? not sure) to create a virtualenv in the same directory as this README file.
 
+Activate it with:
+```
+$ source ./bin/activate
+```
+if using Bash/Zsh in terminal (or VS Code).
+
+Run:
+```
+pip3 install -r requirements.txt
+```
+to get dependencies installed. Now the components should be runnable. Follow the READMEs in both folders.
