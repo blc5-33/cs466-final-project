@@ -2,6 +2,10 @@ import pandas as pd
 import numpy as np
 import argparse
 import json
+import time
+import psutil
+import os
+
 from tqdm import tqdm
 
 
@@ -134,7 +138,7 @@ def space_efficient_local_align(v: str, w: str):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Local alignment using Hirschberg algorithm. It searches the scrubbed data in `/scrubbed-viral-data/` for the best alignment with the query sequence.')
+    parser = argparse.ArgumentParser(description='Local alignment ...')
     parser.add_argument('query_seq', type=str, help='Query sequence for alignment')
     parser.add_argument('out_file', type=str, help='Output file for alignment results')
     parser.add_argument('-n', '--count', type=int, default=10, help='Number of top results to return (default 10)')
@@ -143,24 +147,38 @@ def main():
     query_seq: str = args.query_seq
     out_file: str = args.out_file
     top_n: int = args.count
+    top_n = 5
 
     data_path = '../scrubbed-viral-data/scrubbed_sequences.csv'
+    
     df = pd.read_csv(data_path)
 
-    search_results = []  # list of (score, description, alignment) tuples
+    search_results = []
+    peak_memory = 0
+    process = psutil.Process(os.getpid())
+
+    start_time = time.time()
     for _, row in tqdm(df.iterrows(), total=len(df)):
         score, alignments = space_efficient_local_align(query_seq, row['Sequence'])
-        search_results.append(
-            {
-                'score': score,
-                'description': row['Description'],
-                'alignments': alignments
-            }
-        )
+        search_results.append({
+            'score': score,
+            'description': row['Description'],
+            'alignments': alignments
+        })
+        # Check current memory usage
+        mem_info = process.memory_info().rss  # in bytes
+        if mem_info > peak_memory:
+            peak_memory = mem_info
 
     search_results.sort(key=lambda x: x['score'], reverse=True)
+
     with open(out_file, 'w') as f:
         json.dump(search_results[:top_n], f, indent=4)
+
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print(f"Total runtime: {elapsed_time:.2f} seconds")
+    print(f"Peak memory usage: {peak_memory/(1024*1024):.2f} MB")
 
 if __name__ == '__main__':
     main()

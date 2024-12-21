@@ -1,0 +1,60 @@
+[
+    {
+        "score": 20,
+        "description": "NC_077837.1 |Mammalian orthoreovirus 3 Dearing strain T3D segment S3, complete sequence",
+        "alignments": [
+            [
+                "GCTAAAGTCACCCCTGTAAACGTCAC",
+                "GCTAAAGTCACCCCTGTCGTCGTCAC"
+            ]
+        ]
+    },
+    {
+        "score": 15,
+        "description": "NC_055339.1 |Echarte virus segment L, complete sequence",
+        "alignments": [
+            [
+                "GCTAAAG-TCACCCCTGTAAACGTCAC",
+                "GC-AAAGTTCACCCA-G-AAATGTCAC"
+            ]
+        ]
+    },
+    {
+        "score": 15,
+        "description": "NC_038354.1 |Torque teno midi virus 7 DNA, complete genome, isolate: MDJHem3-2",
+        "alignments": [
+            [
+                "CTAAAGTCACCCCT-GTAAAC-GTCAC",
+                "CTAA---CACCCCTTGTAAACTTTCAC"
+            ]
+        ]
+    },
+    {
+        "score": 14,
+        "description": "NC_044854.1 |Norovirus GI strain Hu/JP/2000/GI.6[PNA1]/WUG1, complete genome",
+        "alignments": [
+            [
+                "AAAGTCACCCCT-GT-AAACGTCA",
+                "AAAGTCAGCCCTGGTGACACATCA"
+            ],
+            [
+                "AAAGTCACCCCT-GT-AAACGTCA-C",
+                "AAAGTCAGCCCTGGTGACACATCAGC"
+            ]
+        ]
+    },
+    {
+        "score": 14,
+        "description": "NC_043587.1 |Ilesha virus strain R5964 segment L, complete sequence",
+        "alignments": [
+            [
+                "CTAAAGTCACCCCTG-TAAACGTCAC",
+                "CTAATGTCACACCTGATAA-C-T-AC"
+            ],
+            [
+                "CTAAAGTCACCCCTG-TAAACGT-CA",
+                "CTAATGTCACACCTGATAA-C-TACA"
+            ]
+        ]
+    }
+]
